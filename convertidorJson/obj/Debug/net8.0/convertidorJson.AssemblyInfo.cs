@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("convertidorJson")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b1159ded7f757322ea26a7d5c82449059b77fec")]
 [assembly: System.Reflection.AssemblyProductAttribute("convertidorJson")]
 [assembly: System.Reflection.AssemblyTitleAttribute("convertidorJson")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

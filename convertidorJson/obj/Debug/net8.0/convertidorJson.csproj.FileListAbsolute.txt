@@ -12,3 +12,4 @@ C:\Users\Nacho\source\repos\convertidorJson\convertidorJson\obj\Debug\net8.0\ref
 C:\Users\Nacho\source\repos\convertidorJson\convertidorJson\obj\Debug\net8.0\convertidorJson.pdb
 C:\Users\Nacho\source\repos\convertidorJson\convertidorJson\obj\Debug\net8.0\convertidorJson.genruntimeconfig.cache
 C:\Users\Nacho\source\repos\convertidorJson\convertidorJson\obj\Debug\net8.0\ref\convertidorJson.dll
+C:\Users\Nacho\source\repos\convertidorJson\convertidorJson\obj\Debug\net8.0\convertidorJson.sourcelink.json

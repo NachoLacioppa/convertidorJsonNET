@@ -11,45 +11,13 @@ namespace Negocio
     public class GestorArchivos
     {
         private Carpeta Carpeta;
-
         public GestorArchivos(Carpeta carpeta)
         {
             this.Carpeta = carpeta;
         }
 
-        //public void LeerContenidoArchivo()
-        //{
-        //    if (!Directory.Exists(Carpeta.Ruta))
-        //    {
-        //        Console.WriteLine("ERROR - GestorArchivos - LeerContenidoArchivo - Carpeta no existe");
-        //        return;
-        //    }
+        private List<string> objetosTransformados = new List<string>();
 
-        //    string[] archivos = Directory.GetFiles(Carpeta.Ruta);
-        //    if (archivos.Length > 0)
-        //    {
-        //        foreach (string archivo in archivos)
-        //        {
-        //            Console.WriteLine($"{archivo}");
-        //            try
-        //            {
-        //                string contenido = File.ReadAllText(archivo);
-        //                Factura datos = JsonSerializer.Deserialize<Factura>(contenido);
-
-        //                TransformarContenidoArchivo(datos);
-
-        //            }
-        //            catch(Exception ex)
-        //            {
-        //                Console.WriteLine($"ERROR - GestorArchivos - LeerContenidoArchivo - {ex.Message}");
-        //            }
-        //        }
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine("WARNING! - GestorArchivos - LeerContenidoArchivo - No hay archivos en la carpeta IN");
-        //    }
-        //}
         public void LeerContenidoArchivo()
         {
             if (!Directory.Exists(Carpeta.Ruta))
@@ -63,16 +31,14 @@ namespace Negocio
             {
                 foreach (string archivo in archivos)
                 {
-                    Console.WriteLine($"{archivo}");
+                    //Console.WriteLine($"{archivo}");
                     try
                     {
                         string contenido = File.ReadAllText(archivo).Trim();
 
-                        // Verificamos si hay más de un JSON (por coma sin corchetes)
                         bool esArrayJson = contenido.StartsWith("[") && contenido.EndsWith("]");
                         string contenidoArray = esArrayJson ? contenido : $"[{contenido}]";
 
-                        // Intentamos deserializar como lista
                         List<Factura> facturas = JsonSerializer.Deserialize<List<Factura>>(contenidoArray);
 
                         if (facturas != null && facturas.Count > 0)
@@ -99,17 +65,30 @@ namespace Negocio
             }
         }
 
-
-
-
-        public void TransformarContenidoArchivo(Factura aux) 
+        public void TransformarContenidoArchivo(Factura aux)
         {
-            Console.WriteLine($"Saldo aceptado: {aux.saldoAceptado}");
-            Console.WriteLine($"Fecha de vencimiento: {aux.fechaVencimientoPago}");
-            Console.WriteLine($"CUIT Emisor: {aux.idFactura.cuitEmisor}");
-            Console.WriteLine($"CBU Emisor: {aux.idFactura.cbuEmisor}");
-            Console.WriteLine($"CUIT Comprador: {aux.cuitComprador}");
-            Console.WriteLine($"CBU Comprador: {aux.cbuComprador}");
+            string contenidoFormateado = $@"
+                {{
+                    banco: ""BancoEjemplo"",
+                    cantidad: 1,
+                    factura: {{
+                        idFactura: {{ cuitEmisor: ""{aux.idFactura.cuitEmisor}"" }},
+                        cuitComprador: ""{aux.cuitComprador}"",
+                        cbuComprador: ""{aux.cbuComprador}"",
+                        cbuEmisor: ""{aux.idFactura.cbuEmisor}"",
+                        fechaVencimientoPago: ""{aux.fechaVencimientoPago}"",
+                        saldoAceptado: {aux.saldoAceptado}
+                    }}
+                }}";
+
+            CrearArchivoSalida(contenidoFormateado);
+
+        }
+
+        public void CrearArchivoSalida(string aux)
+        {
+            objetosTransformados.Add(aux);
+            Console.WriteLine(string.Join(", ", objetosTransformados));
         }
     }
 }

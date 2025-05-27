@@ -14,4 +14,15 @@ class AppConfig
             return Path.GetFullPath(fullPath);
         }
     }
+
+    public static string OutputFolder
+    {
+        get
+        {
+            string basePath = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory)!.Parent!.Parent!.Parent!.FullName;
+            string fullPath = Path.Combine(basePath, "DATOS", "out");
+
+            return Path.GetFullPath(fullPath);
+        }
+    }
 }

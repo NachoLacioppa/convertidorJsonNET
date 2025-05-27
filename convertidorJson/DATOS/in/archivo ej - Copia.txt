@@ -1,0 +1,20 @@
+{
+    "saldoAceptado": 15,
+    "fechaVencimientoPago": "2025-01-18",
+    "idFactura": {
+        "cuitEmisor": "111",
+        "cbuEmisor": "111"
+    },
+    "cuitComprador": "111",
+    "cbuComprador": "111"
+},
+{
+    "saldoAceptado": 25,
+    "fechaVencimientoPago": "2026-12-20",
+    "idFactura": {
+        "cuitEmisor": "222",
+        "cbuEmisor": "222"
+    },
+    "cuitComprador": "222",
+    "cbuComprador": "222"
+}
