@@ -83,7 +83,7 @@ namespace Negocio
                     ProcessStartInfo psi = new ProcessStartInfo
                     {
                         FileName = rutaArchivo,
-                        UseShellExecute = true 
+                        UseShellExecute = true
                     };
 
                     Process.Start(psi);
@@ -118,9 +118,39 @@ namespace Negocio
             string archivoSalida = Path.Combine(outputPath, $"resultado_{fecha}.txt");
 
             File.WriteAllText(archivoSalida, salida);
-            Console.WriteLine($"Archivo de salida generado con {objetosTransformados.Count} objetos: {archivoSalida}");
+            //Console.WriteLine($"Archivo de salida generado con {objetosTransformados.Count} objetos: {archivoSalida}");
+            MostrarResultadoFinal(archivoSalida, objetosTransformados.Count);
 
             AbrirArchivo(archivoSalida);
+        }
+
+        public void MostrarResultadoFinal(string rutaArchivo, int cantidadObjetos)
+        {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
+            // Construimos los textos
+            string titulo = "ARCHIVO GENERADO";
+            string linea1 = $"[✓] Archivo generado con {cantidadObjetos} objeto{(cantidadObjetos > 1 ? "s" : "")}";
+            string linea2 = "[>>] Ruta:";
+            string linea3 = $"  {rutaArchivo}";
+
+            // Determinar el ancho del cuadro según la línea más larga
+            int anchoTotal = Math.Max(Math.Max(titulo.Length, linea1.Length), linea3.Length) + 6;
+
+            string lineaBorde = new string('═', anchoTotal);
+
+            // Mostrar cuadro
+            Console.WriteLine($"╔{lineaBorde}╗");
+            Console.WriteLine($"║{titulo.PadLeft((anchoTotal + titulo.Length) / 2).PadRight(anchoTotal)}║");
+            Console.WriteLine($"╠{lineaBorde}╣");
+            Console.WriteLine($"║  {linea1.PadRight(anchoTotal - 2)}║");
+            Console.WriteLine($"║  {linea2.PadRight(anchoTotal - 2)}║");
+            Console.WriteLine($"║  {linea3.PadRight(anchoTotal - 2)}║");
+            Console.WriteLine($"╚{lineaBorde}╝");
+
+            Console.ResetColor();
+            Console.WriteLine();
         }
     }
 }
