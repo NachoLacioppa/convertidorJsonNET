@@ -24,6 +24,7 @@ namespace Negocio
         {
             if (!Directory.Exists(Carpeta.Ruta))
             {
+                Console.Clear();
                 Console.WriteLine("ERROR - GestorArchivos - LeerContenidoArchivo - Carpeta no existe");
                 return;
             }
@@ -52,11 +53,13 @@ namespace Negocio
                         }
                         else
                         {
+                            Console.Clear();
                             Console.WriteLine("WARNING - No se encontraron facturas válidas en el archivo.");
                         }
                     }
                     catch (Exception ex)
                     {
+                        Console.Clear();
                         Console.WriteLine($"ERROR - GestorArchivos - LeerContenidoArchivo - {ex.Message}");
                     }
                 }
@@ -64,6 +67,7 @@ namespace Negocio
             }
             else
             {
+                Console.Clear();
                 Console.WriteLine("WARNING! - GestorArchivos - LeerContenidoArchivo - No hay archivos en la carpeta IN");
             }
         }
@@ -90,11 +94,13 @@ namespace Negocio
                 }
                 else
                 {
+                    Console.Clear();
                     Console.WriteLine($"WARNING! - GestorArchivos - AbrirArchivo - No se pudo abrir el archivo: no existe la ruta {rutaArchivo}");
                 }
             }
             catch (Exception ex)
             {
+                Console.Clear();
                 Console.WriteLine($"ERROR - GestorArchivos - AbrirArchivo - Error al intentar abrir el archivo: {ex.Message}");
             }
         }

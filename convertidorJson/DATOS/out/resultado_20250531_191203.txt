@@ -1,0 +1,4 @@
+[
+{banco:'017',cantidad:2,factura:{idFactura:{cuitEmisor:'111'},cuitComprador:'111',cbuComprador:'111',cbuEmisor:'111',fechaVencimientoPago:'2025-01-18',saldoAceptado:15}},
+{banco:'017',cantidad:2,factura:{idFactura:{cuitEmisor:'222'},cuitComprador:'222',cbuComprador:'222',cbuEmisor:'222',fechaVencimientoPago:'2026-12-20',saldoAceptado:25}}
+]
