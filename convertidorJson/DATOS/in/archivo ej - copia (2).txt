@@ -1,0 +1,30 @@
+{
+    "saldoAceptado": 89,
+    "fechaVencimientoPago": "2025-01-18",
+    "idFactura": {
+        "cuitEmisor": "444",
+        "cbuEmisor": "444"
+    },
+    "cuitComprador": "444",
+    "cbuComprador": "444"
+},
+{
+    "saldoAceptado": 66,
+    "fechaVencimientoPago": "2025-01-18",
+    "idFactura": {
+        "cuitEmisor": "555",
+        "cbuEmisor": "555"
+    },
+    "cuitComprador": "555",
+    "cbuComprador": "555"
+},
+{
+    "saldoAceptado": 456,
+    "fechaVencimientoPago": "2025-01-18",
+    "idFactura": {
+        "cuitEmisor": "666",
+        "cbuEmisor": "666"
+    },
+    "cuitComprador": "666",
+    "cbuComprador": "666"
+}

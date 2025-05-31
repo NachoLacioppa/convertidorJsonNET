@@ -1,0 +1,10 @@
+{
+    "saldoAceptado": 999,
+    "fechaVencimientoPago": "2025-01-18",
+    "idFactura": {
+        "cuitEmisor": "777",
+        "cbuEmisor": "777"
+    },
+    "cuitComprador": "777",
+    "cbuComprador": "777"
+}

@@ -6,13 +6,13 @@ class Program
 {
     static void Main()
     {
-        Console.WriteLine("Inicio\n");
+        Console.WriteLine($"Inicio - {DateTime.Now.ToString("yyyyMMdd_HHmmss")}\n");
 
         Carpeta carpeta = new Carpeta(AppConfig.InputFolder);
         GestorArchivos gestor = new GestorArchivos(carpeta);
 
         gestor.LeerContenidoArchivo();
 
-        Console.WriteLine("Fin\n");
+        Console.WriteLine("\nFin");
     }
 }
