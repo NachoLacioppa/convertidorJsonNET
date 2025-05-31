@@ -1,0 +1,15 @@
+C:\Users\Nacho\source\repos\convertidorJson\convertidorJson\bin\Release\net8.0\convertidorJson.exe
+C:\Users\Nacho\source\repos\convertidorJson\convertidorJson\bin\Release\net8.0\convertidorJson.deps.json
+C:\Users\Nacho\source\repos\convertidorJson\convertidorJson\bin\Release\net8.0\convertidorJson.runtimeconfig.json
+C:\Users\Nacho\source\repos\convertidorJson\convertidorJson\bin\Release\net8.0\convertidorJson.dll
+C:\Users\Nacho\source\repos\convertidorJson\convertidorJson\bin\Release\net8.0\convertidorJson.pdb
+C:\Users\Nacho\source\repos\convertidorJson\convertidorJson\obj\Release\net8.0\convertidorJson.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nacho\source\repos\convertidorJson\convertidorJson\obj\Release\net8.0\convertidorJson.AssemblyInfoInputs.cache
+C:\Users\Nacho\source\repos\convertidorJson\convertidorJson\obj\Release\net8.0\convertidorJson.AssemblyInfo.cs
+C:\Users\Nacho\source\repos\convertidorJson\convertidorJson\obj\Release\net8.0\convertidorJson.csproj.CoreCompileInputs.cache
+C:\Users\Nacho\source\repos\convertidorJson\convertidorJson\obj\Release\net8.0\convertidorJson.sourcelink.json
+C:\Users\Nacho\source\repos\convertidorJson\convertidorJson\obj\Release\net8.0\convertidorJson.dll
+C:\Users\Nacho\source\repos\convertidorJson\convertidorJson\obj\Release\net8.0\refint\convertidorJson.dll
+C:\Users\Nacho\source\repos\convertidorJson\convertidorJson\obj\Release\net8.0\convertidorJson.pdb
+C:\Users\Nacho\source\repos\convertidorJson\convertidorJson\obj\Release\net8.0\convertidorJson.genruntimeconfig.cache
+C:\Users\Nacho\source\repos\convertidorJson\convertidorJson\obj\Release\net8.0\ref\convertidorJson.dll

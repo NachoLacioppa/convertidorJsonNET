@@ -121,7 +121,23 @@ namespace Negocio
             //Console.WriteLine($"Archivo de salida generado con {objetosTransformados.Count} objetos: {archivoSalida}");
             MostrarResultadoFinal(archivoSalida, objetosTransformados.Count);
 
+            //Console.WriteLine("\n\n\nPresione cualquier tecla para abrir el archivo. . .");
+            //Console.ReadKey();
+
+            Console.ForegroundColor = ConsoleColor.Magenta;
+
+            string message = "Presione cualquier tecla para abrir el archivo...";
+            int width = Console.WindowWidth;
+            int padding = (width - message.Length) / 2;
+
+            Console.WriteLine("\n\n");
+            Console.WriteLine(new string(' ', padding) + message);
+            Console.ResetColor();
+
+            Console.ReadKey();
+
             AbrirArchivo(archivoSalida);
+
         }
 
         public void MostrarResultadoFinal(string rutaArchivo, int cantidadObjetos)
@@ -131,7 +147,7 @@ namespace Negocio
 
             // Construimos los textos
             string titulo = "ARCHIVO GENERADO";
-            string linea1 = $"[✓] Archivo generado con {cantidadObjetos} objeto{(cantidadObjetos > 1 ? "s" : "")}";
+            string linea1 = $"[OK] Archivo generado con {cantidadObjetos} objeto{(cantidadObjetos > 1 ? "s" : "")}";
             string linea2 = "[>>] Ruta:";
             string linea3 = $"  {rutaArchivo}";
 

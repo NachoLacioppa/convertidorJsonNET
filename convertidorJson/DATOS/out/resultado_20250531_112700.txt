@@ -1,9 +1,0 @@
-[
-{banco:'017',cantidad:2,factura:{idFactura:{cuitEmisor:'444'},cuitComprador:'444',cbuComprador:'444',cbuEmisor:'444',fechaVencimientoPago:'2025-01-18',saldoAceptado:89}},
-{banco:'017',cantidad:2,factura:{idFactura:{cuitEmisor:'555'},cuitComprador:'555',cbuComprador:'555',cbuEmisor:'555',fechaVencimientoPago:'2025-01-18',saldoAceptado:66}},
-{banco:'017',cantidad:2,factura:{idFactura:{cuitEmisor:'666'},cuitComprador:'666',cbuComprador:'666',cbuEmisor:'666',fechaVencimientoPago:'2025-01-18',saldoAceptado:456}},
-{banco:'017',cantidad:2,factura:{idFactura:{cuitEmisor:'777'},cuitComprador:'777',cbuComprador:'777',cbuEmisor:'777',fechaVencimientoPago:'2025-01-18',saldoAceptado:999}},
-{banco:'017',cantidad:2,factura:{idFactura:{cuitEmisor:'111'},cuitComprador:'111',cbuComprador:'111',cbuEmisor:'111',fechaVencimientoPago:'2025-01-18',saldoAceptado:15}},
-{banco:'017',cantidad:2,factura:{idFactura:{cuitEmisor:'222'},cuitComprador:'222',cbuComprador:'222',cbuEmisor:'222',fechaVencimientoPago:'2026-12-20',saldoAceptado:25}},
-{banco:'017',cantidad:2,factura:{idFactura:{cuitEmisor:'333'},cuitComprador:'333',cbuComprador:'333',cbuEmisor:'333',fechaVencimientoPago:'2025-01-18',saldoAceptado:10}}
-]
